@@ -16,12 +16,11 @@ var port = process.env.PORT || 8080;
 
 //Get ip address from request connection
 app.get('/', function(req, res, next){
-   
    var ip = (req.header['x-forwarded-for'] || 
-      req.headers['x-forwarded-for'] ||
+      req.headers['x-forwarded-for'].split(',')[0] || //if ip is returned in ::ffff:xxx.xxx.xxx.xxx format
       req.connection.remoteAccess ||
       req.socket.remoteAddress ||
-      req.connection.socket.remoteAddress).split(":")[3]; //if ip is returned in ::ffff:xxx.xxx.xxx.xxx format
+      req.connection.socket.remoteAddress); 
       console.log(req.ip);
       console.log(ip + " this is ip");
       next();
@@ -49,6 +48,6 @@ app.get('/', function (req, res) {
 }); //get ip
 
 //listen to port
-app.listen(port, function(){
-   console.log("Yay Port is working " + port); 
+var listener = app.listen(process.env.PORT, function(){
+   console.log("Listening on Port: " + listener.address().port); 
 });
