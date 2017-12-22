@@ -1,0 +1,28 @@
+{
+  "name": "headerparserproject",
+  "version": "1.0.0",
+  "description": "Get ip address, language and operating system from user browser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yemz/RequestHeaderParserFCCProject.git"
+  },
+  "keywords": [
+    "server",
+    "request",
+    "parser"
+  ],
+  "author": "yemz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yemz/RequestHeaderParserFCCProject/issues"
+  },
+  "homepage": "https://github.com/yemz/RequestHeaderParserFCCProject#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  }
+}
