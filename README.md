@@ -1,5 +1,4 @@
-# RequestHeaderParserFCCProject
-FreeCodeCamp - Back End Project
+# Request Header Parser Microservice - (Back End FreeCodeCamp Project)
 
 Tools: AWS - EC2 (Ubuntu), Apache, Node.js
 
@@ -10,4 +9,4 @@ User Story: Get users IP address, language and operating system from browser.
 
 
 
-Output: https://dark-clover.glitch.me
+Live App: https://dark-clover.glitch.me
